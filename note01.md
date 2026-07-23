@@ -34,6 +34,11 @@ appwiz.cpl
 - 프로그램 추가/제거에서 확인
 
 ### winget을 이용한 설치
+
+```cmd
+msiexec.exe /i https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x64.msi
+```
+
 ```powershell
 winget list qgis
 winget search qgis
