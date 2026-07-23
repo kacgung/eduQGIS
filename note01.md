@@ -35,9 +35,18 @@ appwiz.cpl
 
 ### winget을 이용한 설치
 
+Powershell 7 설치
 ```cmd
 msiexec.exe /i https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x64.msi
 ```
+
+* winget 인식이 안되는 경우
+```
+Install-PackageProvider -Name NuGet -Force | Out-Null
+Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+Repair-WinGetPackageManager
+```
+
 
 ```powershell
 winget list qgis
